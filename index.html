@@ -638,7 +638,7 @@
             <div class="form-group">
               <select id="serviceType" required aria-label="Service Type">
                 <option value="">Select Service Type</option>
-                <option value="physiotherapy">Physiotherapy & Nursing Care</option>
+                <option value="physiotherapy">Physiotherapy </option>
                 <option value="bedsore">Bed Sore Treatment & Care</option>
                 <option value="general">General Wound Care</option>
               </select>
@@ -732,33 +732,47 @@
     </div>
   </footer>
   <script>
-    // Fixed mobile menu toggle
-    document.querySelector('.menu-toggle').addEventListener('click', function() {
-      const nav = document.querySelector('nav ul');
-      const isExpanded = this.getAttribute('aria-expanded') === 'true';
-      
-      this.setAttribute('aria-expanded', !isExpanded);
-      nav.classList.toggle('open');
-      this.innerHTML = isExpanded ? '<i class="fas fa-bars"></i>' : '<i class="fas fa-times"></i>';
-    });
+  // Fixed mobile menu toggle
+  document.querySelector('.menu-toggle').addEventListener('click', function() {
+    const nav = document.querySelector('nav ul');
+    const isExpanded = this.getAttribute('aria-expanded') === 'true';
     
-    // Form submission
-    document.getElementById('appointmentForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const name = document.getElementById('name').value;
-      const phone = document.getElementById('phone').value;
-      const address = document.getElementById('address').value;
-      const issue = document.getElementById('issue').value;
-      
-      const message = `Hello, I would like to book a home visit from TheWoundHeal.%0A%0AName: ${name}%0APhone: ${phone}%0AAddress: ${address}%0AService Needed: ${issue}`;
-      const whatsappLink = `https://wa.me/919834849971?text=${message}`;
-      window.open(whatsappLink, '_blank');
-    });
+    this.setAttribute('aria-expanded', !isExpanded);
+    nav.classList.toggle('open');
+    this.innerHTML = isExpanded ? '<i class="fas fa-bars"></i>' : '<i class="fas fa-times"></i>';
+  });
+  
+  // Form submission with service type check
+  document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const address = document.getElementById('address').value;
+    const issue = document.getElementById('issue').value;
+    const serviceType = document.getElementById('serviceType').value;
 
-    // Update copyright year
-    document.getElementById('current-year').textContent = new Date().getFullYear();
+    // Default numbers
+    const physioNumber = "918551862119";
+    const bedsoreNumber = "919834849971";
 
-    // Other existing scripts
-  </script>
+    // Choose based on service type
+    let whatsappNumber;
+    if (serviceType === "physiotherapy") {
+      whatsappNumber = physioNumber;
+    } else {
+      whatsappNumber = bedsoreNumber; // bed sore + general
+    }
+
+    // Create message
+    const message = `Hello, I would like to book a home visit from TheWoundHeal.%0A%0AName: ${name}%0APhone: ${phone}%0AAddress: ${address}%0AService Type: ${serviceType}%0AIssue: ${issue}`;
+
+    // Use api.whatsapp for desktop + mobile
+    const whatsappLink = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${message}`;
+    window.open(whatsappLink, '_blank');
+  });
+
+  // Update copyright year
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
