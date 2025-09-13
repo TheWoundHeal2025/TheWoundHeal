@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="TheWoundHeal provides expert home nursing, wound care, and physiotherapy services in Pune. Book professional care for wound dressing, debridement, bed sore treatment, and more.">
+  <meta name="keywords" content="wound care, home nursing, physiotherapy, bed sore treatment, Pune nursing services, wound dressing, post-surgery care">
+  <meta name="author" content="TheWoundHeal">
+  <meta property="og:title" content="TheWoundHeal | Professional Home Nursing & Physiotherapy Services">
+  <meta property="og:description" content="Experienced nursing staff providing specialized wound care, dressing, debridement, and physiotherapy services in the comfort of your home.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.thewoundheal.in">
+  <meta property="og:image" content="TheWoundHeal.png">
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YYKCE9974E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());    
+
+  gtag('config', 'G-YYKCE9974E');
+</script>
+  
+  <title>TheWoundHeal.com | Professional Home Nursing & Physiotherapy Services</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <style>
+    /* Modern Normalize */
+    *,*::before,*::after{box-sizing:border-box}html{-moz-tab-size:4;tab-size:4}body{margin:0;line-height:1.5;-webkit-text-size-adjust:100%;font-family:'Roboto',sans-serif}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}hr{height:0}abbr[title]{text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type='button'],[type='reset'],[type='submit']{-webkit-appearance:button}button::-moz-focus-inner,[type='button']::-moz-focus-inner,[type='reset']::-moz-focus-inner,[type='submit']::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type='button']:-moz-focusring,[type='reset']:-moz-focusring,[type='submit']:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:0}legend{padding:0}textarea{overflow:auto}[type='checkbox'],[type='radio']{box-sizing:border-box;padding:0}[type='search']{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}
+
+    /* Custom Variables */
+    :root {
+      --primary: #1a5c9e;
+      --primary-dark: #13447e;
+      --primary-light: #e1edfa;
+      --secondary: #38a169;
+      --secondary-dark: #2f855a;
+      --accent: #c53030;
+      --light: #f8f9fa;
+      --dark: #2d3748;
+      --gray: #718096;
+      --gray-light: #e2e8f0;
+      --footer-bg: #2d3748;
+      --text-primary: #003249;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+      --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+      --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+      --transition: all 0.3s ease;
+    }
+
+    /* Base Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      color: var(--dark);
+      background-color: #f5f7fa;
+      padding-top: 70px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--text-primary);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    /* Header */
+    header {
+      background: white;
+      box-shadow: var(--shadow-sm);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 0;
+    }
+
+    .logo img {
+      height: 50px;
+      width: auto;
+    }
+
+    /* Mobile Menu Toggle - FIXED */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--primary);
+      cursor: pointer;
+      padding: 0.5rem;
+      z-index: 1001;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .contact-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    /* Phone Options Styling */
+    .phone-options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-start;
+    }
+
+    .phone-option {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: var(--dark);
+      font-size: 0.85rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+
+    .phone-option:hover {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+    }
+
+    .phone-option i {
+      font-size: 0.8rem;
+    }
+
+    .phone-option .service-label {
+      font-weight: 500;
+      margin-left: 0.3rem;
+      font-size: 0.75rem;
+      color: var(--gray);
+    }
+
+    /* Hero Section Phone Options */
+    .hero-phone-options {
+      display: flex;
+      justify-content: center; /* Centers horizontally */
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-phone-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.2rem;
+      background: var(--secondary);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-md);
+    }
+
+    .hero-phone-btn:hover {
+      background: var(--secondary-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .hero-phone-btn.bedsore {
+      background: var(--accent);
+      justify-content: center; /* Centers horizontally */
+      align-items: center;
+    }
+
+    .hero-phone-btn.bedsore:hover {
+      background: #a02626;
+    }
+
+    /* Call Action Section Update */
+    .call-action-phones {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .call-phone-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+    }
+
+    .call-phone-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .call-phone-btn.bedsore {
+      background: var(--accent);
+    }
+
+    .call-phone-btn.bedsore:hover {
+      background: #a02626;
+    }
+
+    /* Floating Call Buttons Update */
+    .floating-calls {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      z-index: 1000;
+    }
+
+    .floating-call-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+      box-shadow: var(--shadow-lg);
+      transition: all 0.3s ease;
+      font-size: 1.2rem;
+    }
+
+    .floating-call-btn.physio {
+      background: var(--secondary);
+    }
+
+    .floating-call-btn.bedsore {
+      background: var(--accent);
+    }
+
+    .floating-call-btn:hover {
+      transform: translateY(-3px) scale(1.1);
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: var(--shadow-md);
+      }
+
+      nav ul.open {
+        display: flex;
+      }
+
+      .contact-info {
+        display: none;
+        width: 100%;
+        padding: 1rem;
+        border-top: 1px solid var(--gray-light);
+      }
+
+      nav ul.open ~ .contact-info {
+        display: flex;
+      }
+
+      .phone-options {
+        gap: 0.3rem;
+      }
+
+      .hero-phone-options {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .call-action-phones {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .floating-calls {
+        bottom: 80px;
+        right: 15px;
+      }
+
+      .floating-call-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.1rem;
+      }
+    }
+
+    /* Additional styles for appointment section phone options */
+    .appointment-phones {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .appointment-phone-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      color: white;
+    }
+
+    .appointment-phone-btn.physio {
+      background: var(--secondary);
+    }
+
+    .appointment-phone-btn.bedsore {
+      background: var(--accent);
+    }
+
+    .appointment-phone-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .appointment-phone-btn.physio:hover {
+      background: var(--secondary-dark);
+    }
+
+    .appointment-phone-btn.bedsore:hover {
+      background: #a02626;
+    }
+  </style>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <img src="TheWoundHeal.png" alt="The Wound Heal Logo" width="180" height="50"/>
+      </div>
+     
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#nursing">Nursing</a></li>
+          <li><a href="#bedsore">Bed Sore Care</a></li>
+          <li><a href="#appointment">Book Appointment</a></li>
+        </ul>
+      </nav>
+      <div class="contact-info">
+        <div class="phone-options">
+          <a href="tel:+918551862119" class="phone-option">
+            <i class="fas fa-phone-alt"></i>
+            <span>+91 85518 62119</span>
+            <span class="service-label">Physiotherapy</span>
+          </a>
+          <a href="tel:+919834849971" class="phone-option">
+            <i class="fas fa-phone-alt"></i>
+            <span>+91 98348 49971</span>
+            <span class="service-label">Bed Sore Care</span>
+          </a>
+        </div>
+        <a href="#appointment" class="btn">Book Appointment</a>
+      </div>
+    </div>
+  </header>
+
+<main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <h1>Professional Wound Care & Nursing Services at Your Home</h1>
+        <p>Experienced nursing staff providing specialized wound care, dressing, debridement, and physiotherapy services in the comfort of your home.</p>
+        <div class="hero-btns">
+          <a href="#appointment" class="btn">Book Home Visit</a>
+        </div>
+        <div class="hero-phone-options">
+          <a href="tel:+918551862119" class="hero-phone-btn physio">
+            <i class="fas fa-phone-alt"></i>
+            <span>Physiotherapy +91 85518 62119</span>
+          </a>
+          <a href="tel:+919834849971" class="hero-phone-btn bedsore">
+            <i class="fas fa-phone-alt"></i>
+            <span>Bed Sore Care +91 98348 49971</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="call-action">
+      <div class="container call-action-inner">
+        <div class="call-action-text">
+          Need immediate assistance? Call our specialized support team
+        </div>
+        <div class="call-action-phones">
+          <a href="tel:+918551862119" class="call-phone-btn physio">
+            <i class="fas fa-phone-alt"></i> Physiotherapy +91 85518 62119
+          </a>
+          <a href="tel:+919834849971" class="call-phone-btn bedsore">
+            <i class="fas fa-phone-alt"></i> Bed Sore Care +91 98348 49971
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Comprehensive Services</h2>
+          <p>Professional medical care for all types of wounds in the comfort of your home.</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-band-aid"></i></div>
+            <div class="service-content">
+              <h3>Wound Dressing & Debridement</h3>
+              <ul>
+                <li><i class="fas fa-check-circle"></i> Bed Sore Care</li>
+                <li><i class="fas fa-check-circle"></i> Daily/weekly dressing changes</li>
+                <li><i class="fas fa-check-circle"></i> Stitch removal and post-op care</li>
+                <li><i class="fas fa-check-circle"></i> Pressure ulcer management</li>
+                <li><i class="fas fa-check-circle"></i> Diabetic foot care</li>
+              </ul>
+              <div style="margin-top: 1rem;">
+                <a href="tel:+919834849971" class="appointment-phone-btn bedsore">
+                  <i class="fas fa-phone-alt"></i>
+                  <span>Call for Bed Sore Care</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-procedures"></i></div>
+            <div class="service-content">
+              <h3>Nursing Care Services</h3>
+              <ul>
+                <li><i class="fas fa-check-circle"></i> Sponging and personal hygiene care</li>
+                <li><i class="fas fa-check-circle"></i> IV fluids and injections administration</li>
+                <li><i class="fas fa-check-circle"></i> Post-operative care and monitoring</li>
+                <li><i class="fas fa-check-circle"></i> Catheter and tube care</li>
+                <li><i class="fas fa-check-circle"></i> RT insertion</li>
+              </ul>
+              <div style="margin-top: 1rem;">
+                <a href="tel:+919834849971" class="appointment-phone-btn physio">
+                  <i class="fas fa-phone-alt"></i>
+                  <span>Call for Nursing Care</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-wheelchair"></i></div>
+            <div class="service-content">
+              <h3>Specialized Care Programs</h3>
+              <ul>
+                <li><i class="fas fa-check-circle"></i> Parkinson's disease management</li>
+                <li><i class="fas fa-check-circle"></i> Post-stroke rehabilitation care</li>
+                <li><i class="fas fa-check-circle"></i> Advanced physiotherapy modalities</li>
+                <li><i class="fas fa-check-circle"></i> Mobility assistance and exercises</li>
+                <li><i class="fas fa-check-circle"></i> Pain management techniques</li>
+              </ul>
+              <div style="margin-top: 1rem;">
+                <a href="tel:+918551862119" class="appointment-phone-btn physio">
+                  <i class="fas fa-phone-alt"></i>
+                  <span>Call for Physiotherapy</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nursing -->
+    <section class="nursing-services" id="nursing">
+      <div class="container nursing-container">
+        <div class="nursing-content">
+          <h2>Expert Nursing Care at Your Doorstep</h2>
+          <p>Our certified nurses provide compassionate and professional care for wound management, ensuring optimal healing and comfort.</p>
+          <div class="nursing-features">
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fas fa-user-md"></i></div>
+              <div class="feature-text"><h4>Experienced Medical Staff</h4><p>Certified nurses with extensive wound care training.</p></div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fas fa-home"></i></div>
+              <div class="feature-text"><h4>Convenient Home Visits</h4><p>All care delivered in your home to avoid hospital visits.</p></div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fas fa-hand-holding-medical"></i></div>
+              <div class="feature-text"><h4>As Per Doctor's Advice</h4><p>All treatments, including IVs and injections, follow physician guidance.</p></div>
+            </div>
+          </div>
+          <div class="hero-phone-options" style="justify-content: flex-start; margin-top: 1.5rem;">
+            <a href="tel:+919834849971" class="hero-phone-btn physio">
+              <i class="fas fa-phone-alt"></i>
+              <span>Call for Nursing Care</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bed Sore -->
+    <section class="bedsore" id="bedsore">
+      <div class="container">
+        <div class="section-header">
+          <h2>Bed Sore Management & Care</h2>
+          <p>Specialized care for pressure ulcers at all stages.</p>
+          <div style="text-align: center; margin-top: 1rem;">
+            <a href="tel:+919834849971" class="hero-phone-btn bedsore">
+              <i class="fas fa-phone-alt"></i>
+              <span>Call Bed Sore Specialist +91 98348 49971</span>
+            </a>
+          </div>
+        </div>
+        <div class="stages-container">
+          <div class="stage-card">
+            <div class="stage-header">
+              <h3>Stage 1</h3>
+              <p>Early Intervention</p>
+            </div>
+            <div class="stage-body">
+              <ul>
+                <li><i class="fas fa-check"></i> Skin assessment and monitoring</li>
+                <li><i class="fas fa-check"></i> Pressure-relieving techniques</li>
+                <li><i class="fas fa-check"></i> Specialized cushioning</li>
+                <li><i class="fas fa-check"></i> Skin protection products</li>
+                <li><i class="fas fa-check"></i> Repositioning schedule</li>
+              </ul>
+            </div>
+          </div>
+          <div class="stage-card">
+            <div class="stage-header">
+              <h3>Stage 2</h3>
+              <p>Partial Thickness</p>
+            </div>
+            <div class="stage-body">
+              <ul>
+                <li><i class="fas fa-check"></i> Wound cleaning and debridement</li>
+                <li><i class="fas fa-check"></i> Advanced dressings</li>
+                <li><i class="fas fa-check"></i> Infection prevention</li>
+                <li><i class="fas fa-check"></i> Nutritional assessment</li>
+                <li><i class="fas fa-check"></i> Pressure redistribution devices</li>
+              </ul>
+            </div>
+          </div>
+          <div class="stage-card">
+            <div class="stage-header">
+              <h3>Stage 3</h3>
+              <p>Full Thickness</p>
+            </div>
+            <div class="stage-body">
+              <ul>
+                <li><i class="fas fa-check"></i> Advanced wound care</li>
+                <li><i class="fas fa-check"></i> Surgical debridement if needed</li>
+                <li><i class="fas fa-check"></i> Negative pressure therapy</li>
+                <li><i class="fas fa-check"></i> Infection control management</li>
+                <li><i class="fas fa-check"></i> Comprehensive healing plan</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Appointment -->
+    <section class="appointment" id="appointment">
+      <div class="container">
+        <div class="appointment-form">
+          <h3>Book an Appointment</h3>
+          <form id="appointmentForm">
+            <div class="form-group">
+              <input type="text" id="name" placeholder="Your Name" required aria-label="Your Name"/>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="phone" placeholder="Your Contact Number" required aria-label="Your Contact Number"/>
+            </div>
+            <div class="form-group">
+              <input type="text" id="address" placeholder="Your Address" required aria-label="Your Address"/>
+            </div>
+            <div class="form-group">
+              <select id="serviceType" required aria-label="Service Type">
+                <option value="">Select Service Type</option>
+                <option value="physiotherapy">Physiotherapy & Nursing Care</option>
+                <option value="bedsore">Bed Sore Treatment & Care</option>
+                <option value="general">General Wound Care</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <input type="text" id="issue" placeholder="Describe your specific needs" required aria-label="Service Details"/>
+            </div>
+            <div class="appointment-options">
+              <button type="submit" class="btn">Send via WhatsApp</button>
+            </div>
+            <div class="appointment-phones">
+              <a href="tel:+918551862119" class="appointment-phone-btn physio">
+                <i class="fas fa-phone-alt"></i>
+                <span>Physiotherapy +91 85518 62119</span>
+              </a>
+              <a href="tel:+919834849971" class="appointment-phone-btn bedsore">
+                <i class="fas fa-phone-alt"></i>
+                <span>Bed Sore Care +91 98348 49971</span>
+              </a>
+            </div>
+          </form>
+          <p class="appointment-fee">
+            Home visit fee <span>₹500</span>
+          </p>
+          <div class="contact-options">
+            <a href="mailto:care@thewoundheal.com"><i class="fas fa-envelope"></i> Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floating Call Buttons -->
+    <div class="floating-calls">
+      <a href="tel:+918551862119" class="floating-call-btn physio" aria-label="Call for Physiotherapy">
+        <i class="fas fa-walking"></i>
+      </a>
+      <a href="tel:+919834849971" class="floating-call-btn bedsore" aria-label="Call for Bed Sore Care">
+        <i class="fas fa-bed"></i>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-container">
+      <div class="footer-column">
+        <h3>Our Services</h3>
+        <ul>
+          <li><a href="#services">Wound Dressing & Debridement</a></li>
+          <li><a href="#services">Nursing Care at Home</a></li>
+          <li><a href="#bedsore">Bed Sore Management</a></li>
+          <li><a href="#contact">IV Fluids & Injections</a></li>
+          <li><a href="#contact">Post-Operative Care</a></li>
+          <li><a href="#nursing">Parkinson's & Stroke Care</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#nursing">Nursing Care</a></li>
+          <li><a href="#bedsore">Bed Sore Care</a></li>
+          <li><a href="#appointment">Book Appointment</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Contact Information</h3>
+        <ul>
+          <li><strong>Physiotherapy </strong></li>
+          <li><a href="tel:+918551862119">+91 85518 62119</a></li>
+          <li><strong>Bed Sore Treatment & & Nursing:</strong></li>
+          <li><a href="tel:+919834849971">+91 98348 49971</a></li>
+          <li><a href="mailto:care@thewoundheal.com">care@thewoundheal.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Service Areas</h3>
+        <ul>
+          <li>Pune City</li>
+          <li>Pimpri-Chinchwad</li>
+          <li>Hinjewadi</li>
+          <li>Kothrud</li>
+          <li>Wakad</li>
+         
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; <span id="current-year">2025</span> TheWoundHeal.com. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    // Fixed mobile menu toggle
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('nav ul');
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      
+      this.setAttribute('aria-expanded', !isExpanded);
+      nav.classList.toggle('open');
+      this.innerHTML = isExpanded ? '<i class="fas fa-bars"></i>' : '<i class="fas fa-times"></i>';
+    });
+    
+    // Form submission
+    document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const address = document.getElementById('address').value;
+      const issue = document.getElementById('issue').value;
+      
+      const message = `Hello, I would like to book a home visit from TheWoundHeal.%0A%0AName: ${name}%0APhone: ${phone}%0AAddress: ${address}%0AService Needed: ${issue}`;
+      const whatsappLink = `https://wa.me/919834849971?text=${message}`;
+      window.open(whatsappLink, '_blank');
+    });
+
+    // Update copyright year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Other existing scripts
+  </script>
+</body>
+</html>

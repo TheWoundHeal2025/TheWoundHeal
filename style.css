@@ -1,0 +1,968 @@
+/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/* Document
+   ========================================================================== */
+/**
+ * Use a better box model (opinionated).
+ */  
+*,*::before,*::after{box-sizing:border-box}/**
+ * Use a more readable tab size (opinionated).
+ */html{-moz-tab-size:4;tab-size:4}/**
+
+ */body{margin:0;line-height:1.5;-webkit-text-size-adjust:100%}/* Sections
+   ========================================================================== */
+/**
+
+ */body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}/**
+ * Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+ */body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'}/* Grouping content
+   ========================================================================== */
+/**
+ 
+ */hr{height:0}/* Text-level semantics
+   ========================================================================== */
+/**
+ * Add the correct text decoration in Chrome, Edge, and Safari.
+ */abbr[title]{text-decoration:underline dotted}/**
+ * Add the correct font weight in Edge and Safari.
+ */b,strong{font-weight:bolder}/**
+ * 1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+ 
+ */code,kbd,samp,pre{font-family:ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;font-size:1em}/**
+ 
+ */small{font-size:80%}/**
+
+ */sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}/* Forms
+   ========================================================================== */
+/**
+
+ */button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}/**
+
+ */button,select{text-transform:none}/**
+ 
+ */button,[type='button'],[type='reset'],[type='submit']{-webkit-appearance:button}/**
+
+ */button::-moz-focus-inner,[type='button']::-moz-focus-inner,[type='reset']::-moz-focus-inner,[type='submit']::-moz-focus-inner{border-style:none;padding:0}/**
+
+ */button:-moz-focusring,[type='button']:-moz-focusring,[type='reset']:-moz-focusring,[type='submit']:-moz-focusring{outline:1px dotted ButtonText}/**
+
+ */fieldset{padding:0}/**
+
+ */textarea{overflow:auto}/**
+
+ */[type='checkbox'],[type='radio']{box-sizing:border-box;padding:0}/**
+ 
+ */::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}/**
+ 
+ */[type='search']{-webkit-appearance:textfield;outline-offset:-2px}/**
+ 
+ */::-webkit-search-decoration{-webkit-appearance:none}/**
+
+ */::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}/* Interactive
+ 
+ */summary{display:list-item}
+
+/* Custom CSS */
+:root {
+  --primary: #1a5c9e;
+  --primary-dark: #13447e;
+  --primary-light: #e1edfa;
+  --secondary: #38a169;
+  --secondary-dark: #2f855a;
+  --accent: #c53030;
+  --light: #f8f9fa;
+  --dark: #2d3748;
+  --gray: #718096;
+  --gray-light: #e2e8f0;
+  --footer-bg: #2d3748;
+  --text-primary: #003249;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+  --transition: all 0.3s ease;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: var(--dark);
+  background-color: #f5f7fa;
+  padding-top: 70px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+      
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--secondary);
+}
+
+.section-header p {
+  color: var(--gray);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 0.75rem 1.75rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background: var(--secondary);
+}
+
+.btn-secondary:hover {
+  background: var(--secondary-dark);
+}
+
+.btn:focus {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 2px;
+}
+
+/* Header */
+header {
+  background: white;
+  box-shadow: var(--shadow-sm);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: var(--transition);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.logo img {
+  height: 50px;
+  width: auto;
+  margin-right: 0.5rem;
+  margin-left: 2rem;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--primary);
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+  margin-left: 10rem;
+}
+
+
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+nav ul li a:hover {
+  color: var(--primary);
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-info .phone {
+  display: flex;
+  align-items: center;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.contact-info .phone i {
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(26, 92, 158, 0.9), rgba(26, 92, 158, 0.9)), url('https://images.unsplash.com/photo-1581595219319-4e8db8f6e119?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: white;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.hero-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Call to Action */
+.call-action {
+  background: white;
+  padding: 1.25rem 0;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.call-action-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.call-action-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--dark);
+}
+
+/* Services Section */
+.services {
+  padding: 5rem 0;
+  background: white;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.service-card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-icon {
+  height: 12rem;
+  background: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  color: var(--primary);
+}
+
+.service-content {
+  padding: 1.5rem;
+}
+
+.service-content h3 {
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.service-content ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.service-content ul li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--gray-light);
+  display: flex;
+  align-items: flex-start;
+}
+
+.service-content ul li:last-child {
+  border-bottom: none;
+}
+
+.service-content ul li i {
+  color: var(--secondary);
+  margin-right: 0.5rem;
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+}
+
+/* Nursing Services */
+.nursing-services {
+  padding: 5rem 0;
+  background: linear-gradient(to bottom, #f0f7ff, #ffffff);
+}
+
+.nursing-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.nursing-content {
+  padding-right: 1.5rem;
+}
+
+.nursing-content h2 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.nursing-content p {
+  margin-bottom: 1.5rem;
+  color: var(--gray);
+}
+
+.nursing-features {
+  margin-top: 1.5rem;
+}
+
+.feature-item {
+  display: flex;
+  margin-bottom: 1.25rem;
+}
+
+.feature-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  background: rgba(56, 161, 105, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.25rem;
+  flex-shrink: 0;
+}
+
+.feature-icon i {
+  color: var(--secondary);
+  font-size: 1.5rem;
+}
+
+.feature-text h4 {
+  margin-bottom: 0.25rem;
+  color: var(--dark);
+}
+
+.feature-text p {
+  margin-bottom: 0;
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.nursing-image img {
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+/* Bedsore Section */
+.bedsore {
+  /*padding: 5rem 0;*/
+  background: white;
+}
+
+.stages-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.stage-card {
+  background: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  padding: 1.5rem;
+  border-top: 4px solid var(--accent);
+}
+
+.stage-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-0.5rem);
+}
+
+.stage-header h3 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.stage-header p {
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--dark);
+}
+
+.stage-body ul {
+  list-style: none;
+  color: var(--dark);
+}
+
+.stage-body ul li {
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: flex-start;
+  font-size: 0.95rem;
+}
+
+.stage-body ul li i {
+  color: var(--primary);
+  margin-right: 0.5rem;
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+}
+
+/* Appointment Section */
+.appointment {
+  padding: 5rem 0;
+  background: var(--primary);
+  color: white;
+}
+
+.appointment-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-lg);
+  color: var(--dark);
+}
+
+.appointment-form h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+  font-size: 1.75rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--gray-light);
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-group input:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(26, 92, 158, 0.2);
+}
+
+.appointment-options {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.appointment-fee {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: var(--dark);
+}
+
+.appointment-fee span {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.contact-options {
+  text-align: center;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.contact-options a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-options a:hover {
+  color: var(--secondary);
+}
+
+/* Floating Call Button */
+.floating-call {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 999;
+}
+
+.floating-call-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: var(--secondary);
+  color: white;
+  box-shadow: var(--shadow-md);
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.floating-call-btn:hover {
+  background: var(--accent);
+  transform: scale(1.1);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Footer */
+footer {
+  background: var(--footer-bg);
+  color: white;
+  padding: 3.5rem 0 1.5rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.footer-column h3 {
+  margin-bottom: 1.25rem;
+  color: white;
+  font-size: 1.25rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-column h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--secondary);
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-column ul li a {
+  color: var(--gray-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.footer-column ul li a:hover {
+  color: var(--secondary);
+}
+
+.contact-info-footer div {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+  color: var(--gray-light);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.contact-info-footer div i {
+  margin-right: 0.75rem;
+  font-size: 1rem;
+  color: var(--secondary);
+  margin-top: 0.2rem;
+}
+
+.address {
+  color: var(--gray-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.address:hover {
+  color: var(--secondary);
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #4a5568;
+  color: var(--gray-light);
+  font-size: 0.85rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.service-card, .stage-card, .appointment-form {
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+a:focus, button:focus, input:focus, textarea:focus {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .nursing-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .nursing-content {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .nursing-image {
+    order: -1;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  
+  nav ul {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    padding: 1rem;
+    box-shadow: var(--shadow-md);
+    z-index: 999;
+  }
+  
+  nav ul.open {
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 0;
+    padding: 0.5rem 0;
+  }
+  
+  nav ul li a {
+    padding: 0.5rem;
+    display: block;
+  }
+  
+  .contact-info {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--gray-light);
+    display: none;
+  }
+  
+  nav ul.open ~ .contact-info {
+    display: flex;
+  }
+  
+  .hero {
+    padding: 3.5rem 0;
+    background-attachment: scroll;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+  }
+  
+  .call-action-inner {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .section-header h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 3rem 0;
+  }
+  
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .hero-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .hero-btns .btn {
+    width: 100%;
+  }
+  
+  .appointment-form {
+    padding: 1.5rem;
+  }
+  
+  .appointment-options {
+    flex-direction: column;
+  }
+  
+  .appointment-options .btn {
+    width: 100%;
+  }
+  
+  .floating-call-btn {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+  }
+  
+  .service-icon {
+    height: 10rem;
+    font-size: 3rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  header, .floating-call, .hero-btns, .call-action {
+    display: none;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    padding-top: 0;
+    color: #000;
+    background: #fff;
+  }
+  
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .service-card, .stage-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+  }
+  
+  .appointment-form {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+  
+  footer {
+    background: #fff;
+    color: #000;
+    border-top: 1px solid #000;
+  }
+  
+  .footer-column h3 {
+    color: #000;
+  }
+  
+  .footer-column ul li a {
+    color: #000;
+  }
+  
+  .contact-info-footer div {
+    color: #000;
+  }
+}
