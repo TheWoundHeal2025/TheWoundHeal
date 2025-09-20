@@ -3,42 +3,42 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://thewoundcare.in/</loc>
+    <loc>https://thewoundheal.in/</loc>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
   </url>
 
   <!-- Services section -->
   <url>
-    <loc>https://thewoundcare.in/#services</loc>
+    <loc>https://thewoundheal.in/#services</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
 
   <!-- Nursing section -->
   <url>
-    <loc>https://thewoundcare.in/#nursing</loc>
+    <loc>https://thewoundheal.in/#nursing</loc>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
 
   <!-- Bed sore care section -->
   <url>
-    <loc>https://thewoundcare.in/#bedsore</loc>
+    <loc>https://thewoundheal.in/#bedsore</loc>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
 
   <!-- Appointment form -->
   <url>
-    <loc>https://thewoundcare.in/#appointment</loc>
+    <loc>https://thewoundheal.in/#appointment</loc>
     <priority>0.9</priority>
     <changefreq>daily</changefreq>
   </url>
 
   <!-- Privacy Policy page -->
   <url>
-    <loc>https://thewoundcare.in/privacy-policy.html</loc>
+    <loc>https://thewoundheal.in/privacy-policy.html</loc>
     <priority>0.5</priority>
     <changefreq>yearly</changefreq>
   </url>
